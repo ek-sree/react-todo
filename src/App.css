@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+body {
+  background: linear-gradient(to right, rgba(2, 0, 36, 1) 0%, rgba(12, 12, 86, 1) 21%, rgba(0, 212, 255, 1) 100%);
+  margin: 0; 
+  padding: 0; 
+ 
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo {
+  /* height: 1000px; */
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  width: 250px;
+  height: 40px;
+  margin-top: 17px;
+  background-color: rgb(244, 244, 244);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 10);
+  padding: 5px;
+  border-radius: 8px;
+  border-style: none;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-btn {
+  margin-left: 10px;
+  width: 50px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.form {
+  background-color: rgba(255, 255, 255, 0.5); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 10);
+  border-radius: 5px;
+  width: 400px;
+  height: 80px;
+  text-align: center;
+  justify-content: center;
+}
+
+ul {
+ 
+  border-radius: 6px;
+  padding: 5px;
+  
+}
+
+ul > li {
+  padding-top: 10px;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 10); 
+  color: white; 
+  height: 38px;
+  padding-left: 20px;
+  position: relative;
+}
+
+
+ul > li .done {
+  font-size: 20px;
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 10px; 
+  color: #32CD32; 
+  cursor: pointer;
+}
+
+ul > li .edit {
+  font-size: 20px;
+  position: absolute;
+  right: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFD700; 
+  cursor: pointer;
+}
+
+ul > li .delete {
+  font-size: 25px;
+  position: absolute;
+  right: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FF6347; 
+  cursor: pointer;
+}
+
+ul > li .done:hover,
+ul > li .edit:hover,
+ul > li .delete:hover {
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 1)); 
+}
+
+#for-strike{
+  text-decoration: line-through;
+  color: red;
+  opacity: 0.3;
 }
