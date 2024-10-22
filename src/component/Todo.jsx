@@ -16,6 +16,19 @@ const Todo = ()=>{
         inputRef.current.focus()
     })
 
+    useEffect(() => {
+        const savedTodos = JSON.parse(localStorage.getItem("todo"));
+        if (savedTodos && savedTodos.length > 0) {
+            settodos(savedTodos); 
+        }
+    }, []);  
+
+
+    useEffect(() => {
+        localStorage.setItem("todo", JSON.stringify(todos));
+    }, [todos]);
+
+
     const handleSubmit=(e)=>{
         e.preventDefault()
     }
